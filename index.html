@@ -2,20 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>Trip Mentor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+    <link href="/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800"
           rel="stylesheet" type="text/css">
     <style type="text/css">
 
       /* Large desktop */
-      @media (min-width: 980px) { 
+      @media (min-width: 980px) {
         body {
          padding-top: 60px;
         }
@@ -25,10 +26,18 @@
        .linediv-r {
          border-left: 1px white solid;
        }
+       .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5,
+       .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10,
+       .col-lg-11, .col-lg-12 {
+         float: left;
+       }
+       .col-lg-4 {
+         width: 33.33333333333333%;
+       }
       }
 
       /* Landscape phones and down */
-      @media (max-width: 480px) { 
+      @media (max-width: 480px) {
        .copy {
          padding: 2.5% 10%;
        }
@@ -98,30 +107,27 @@
         color: #ccccff;
       }
 
-     /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
-     div.addthis_toolbox {
-      width: 174px;
-      margin: 0 auto;
-     }
+      /* Some additional stylig */
+      .container .col-lg-4 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
     </style>
-<script type="text/javascript">
+    <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-42843113-1']);
-  _gaq.push(['_trackPageview']);
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-43000823-1']);
+      _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
 
-</script>
-  </head>
-  <body>
-
-    <!-- Mobile-friendly navbar adapted from example. -->
-    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+    </script>
+ </head>
+  <body data-spy="scroll" data-target="#navbar">
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -136,91 +142,112 @@
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="/orders">Orders</a></li>
+	      <li><a href="/orders">Orders</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
+            <ul class="nav pull-right">
+              <li><a href="/users/sign_up">Sign Up</a></li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+                <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                <!-- Login form here -->
+                </div>
+              </li>
+            </ul>
           </div><!--/.nav-collapse -->
-        </div>
+	</div>
       </div>
     </div>
 
-    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
-    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
-    <!-- http://stackoverflow.com/a/12270322 -->
     <div class="container">
-      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
-      <!-- www.google.com/fonts/specimen/Ubuntu -->
-      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid heading">
-        <div class="span12">
-          <h1>Product: Development Version</h1>
-        </div>
-      </div> 
       <div class="row-fluid subheading">
-        <div class="span12">
-          <!-- Special typography from Bootstrap for lead paragraph. -->
-          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">One sentence description.</p>
-        </div>
+	<div class="span12">
+	  <h1>Trip Mentor</h1>
+	</div>
       </div>
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
+      <div class="row-fluid subheading">
+	<div class="span12">
+	  <p class="lead">Find your Mentor for amazing Trip !</p>
+	</div>
+      </div>
 
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
-        <div class="span5 actions">
+      <div class="row" id="navbar">
+        <div class="col-lg-4">
+          <img class="img-circle" src="http://i.imgur.com/CzSI8Rf.png" alt="">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          <h3>Choose the Place</h3>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p><a class="btn btn-default" href="#section1">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="" src="http://i.imgur.com/KNs589A.png" alt="">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          <h3>Choose your Interest</h3>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-default" href="#section2">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="http://i.imgur.com/Cp6qBGo.png" alt="">
+          <span class="glyphicon glyphicon-ok"></span>
+          <h3>Choose your Mentor</h3>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#section3">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <div class="row-fluid pitch">
+	<div class="span5 offset1 video">
+	  <img class="img-polaroid" src="http://placehold.it/480x300" alt="">
+	</div>
+
+	<div class="span5 actions">
           <div class="row-fluid">
-          <div class="span8 offset2">
-            <div class="row-fluid statistics">
+	  <div class="span8 offset2">
+	    <div class="row-fluid statistics">
+	      <div class="span4">
+		<div class="linediv-l">
+		<h3>1000</h3> <p>backers</p>
+	        </div>
+	      </div>
+	      <div class="span4">
+		<div class="linediv-c">
+		<h3>$6000</h3> <p>of $30,000</p>
+	        </div>
+	      </div>
               <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look
-                different in horizontal and vertical layouts, illustrating
-                media queries. -->
-                <div class="linediv-l">
-                <h3>1000</h3> <p>backers</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$6000</h3> <p>of $10,000</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-r">
-                <h3>10</h3> <p>days left</p>
-                </div>
-              </div>
-            </div>
+	        <div class="linediv-r">
+		<h3>10</h3> <p>days left</p>
+      	        </div>
+ 	      </div>
+	    </div>
           </div>
           <div class="row-fluid">
-          <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
-            </div>
-          </div>
-          </div>
-          <div class="row-fluid">
-          <div class="span6 offset3 order">
-	    <a class="coinbase-button" data-button-style="custom_large" data-button-text="Preorder with Bitcoin" data-code="13b56883764b54e6ab56fef3bcc7229c" href="https://coinbase.com/checkouts/13b56883764b54e6ab56fef3bcc7229c">Preorder with Bitcoin</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+	  <div class="span10 offset1">
+	    <div class="thermometer progress active">
+	      <div class="bar bar-success" style="width: 60%;"></div>
+	      <div class="bar bar-warning" style="width: 40%;"></div>
+	    </div>
 	  </div>
           </div>
           <div class="row-fluid">
-          <div class="span8 offset2 social">
-            <!-- AddThis Button BEGIN -->
+	  <div class="span6 offset3 order">
+	    <a class="coinbase-button" data-code="b73d0dafa5aa85e02dd3a94cc308ef06" data-button-style="donation_small" href="https://coinbase.com/checkouts/b73d0dafa5aa85e02dd3a94cc308ef06">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+	  </div>
+          </div>
+          <div class="row-fluid">
+          <div class="span8 offset2  social">
+	    <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
               <a class="addthis_button_preferred_1"></a>
               <a class="addthis_button_preferred_2"></a>
+              <a class="addthis_button_preferred_3"></a>
+              <a class="addthis_button_preferred_4"></a>
               <a class="addthis_button_compact"></a>
               <a class="addthis_counter addthis_bubble_style"></a>
             </div>
-	     <script type="text/javascript">var addthis_config = 
-	      {"data_track_addressbar":true};</script>
-	     <script type="text/javascript" 
- 		     src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51e5f5d9549fdf9b"></script>
+            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51fad2d65ff905c3"></script>
             <!-- AddThis Button END -->
           </div>
           </div>
@@ -228,17 +255,13 @@
         </div>
       </div>
 
-      <!-- Beyond this part the marketing copy begins. -->
-      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
-      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
-      <!-- http://placehold.it -->
-      <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
-        <div class="span5 copy">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+      <div class="row-fluid section1" id="section1">
+	<div class="span5 offset1 asset">
+	  <img src="http://i.imgur.com/wabUtsJ.png" alt="">
+	</div>
+	<div class="span5 copy">
+	  <p>
+	     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
             mollis justo velit at nunc. Fusce nec egestas sem. Donec
             fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
@@ -250,13 +273,16 @@
             rutrum, nunc leo tempus nisl, eu mollis justo velit at
             nunc. Fusce nec egestas sem. Donec fringilla.
           </p>
-        </div>
+	</div>
       </div>
 
-      <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+      <div class="row-fluid section1" id="section2">
+	<div class="span5 offset1 asset">
+	  <img src="http://i.imgur.com/ELl4WPM.png" alt="">
+	</div>
+	<div class="span5 copy">
+	  <p>
+	     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
             mollis justo velit at nunc. Fusce nec egestas sem. Donec
             fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
@@ -268,72 +294,84 @@
             rutrum, nunc leo tempus nisl, eu mollis justo velit at
             nunc. Fusce nec egestas sem. Donec fringilla.
           </p>
-        </div>
-        <div class="span5 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
+	</div>
       </div>
 
-      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
-      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
-      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+      <div class="row-fluid section1" id="section3">
+	<div class="span5 offset1 asset">
+	  <img src="http://i.imgur.com/P4XAWqJ.png" alt="">
+	</div>
+	<div class="span5 copy">
+	  <p>
+	     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
+            mollis justo velit at nunc. Fusce nec egestas sem. Donec
+            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
+            volutpat lorem ut congue malesuada. In facilisis scelerisque
+            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
+            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
+            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
+            rutrum, nunc leo tempus nisl, eu mollis justo velit at
+            nunc. Fusce nec egestas sem. Donec fringilla.
+          </p>
+	</div>
+      </div>
+
       <div class="row-fluid faq">
-          <div class="span10 offset1">
-            <h3>FAQ</h3>
-            <div class="accordion" id="accordion2">
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion2" href="#collapseOne">
-                    What does FAQ stand for?
-                  </a>
-                </div>
-                <div id="collapseOne" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    Frequently Asked Question.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion2" href="#collapseTwo">
-                    What's a Frequently Asked Question?
-                  </a>
-                </div>
-                <div id="collapseTwo" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    A question which is commonly asked by users.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+	<div class="span10 offset1">
+	  <h3>FAQ</h3>
+	  <div class="accordion" id="accordion2">
+	    <div class="accordion-group">
+	      <div class="accordion-heading">
+		<a class="accordion-toggle" data-toggle="collapse"
+		   data-parent="#accordion2" href="#collapseOne">
+		  How it works?
+		</a>
+	      </div>
+	      <div id="collapseOne" class="accordion-body collapse">
+		<div class="accordion-inner">
+		  Get your instagram images from internet using Wi-Fi
+		</div>
+	      </div>
+	    </div>
+	    <div class="accordion-group">
+	      <div class="accordion-heading">
+		<a class="accordion-toggle" data-toggle="collapse"
+		   data-parent="#accordion2" href="#collapseTwo">
+		  Can it play also videos from Instagram?
+		</a>
+	      </div>
+	      <div id="collapseTwo" class="accordion-body collapse">
+		<div class="accordion-inner">
+		  In the future - yes!
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
       </div>
 
-      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
-      <!-- http://creativecommons.org/licenses/ -->
       <div class="row-fluid footer">
-        <div class="span12">
-          <p>This work is licensed under
+	<div class="span12">
+           <p>This work is licensed under
             the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
               By-SA 3.0
             </a>, without all the cruft that would otherwise be
-            put at the bottom of the page.</p>
+            put at the bottom of the page.
+	   </p>
         </div>
       </div>
     </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-43000823-1', 'tripmentor.net');
+      ga('send', 'pageview');
 
-  ga('create', 'UA-42843113-1', 'bitstart.net');
-  ga('send', 'pageview');
-
-</script>
+    </script>
   </body>
 </html>
